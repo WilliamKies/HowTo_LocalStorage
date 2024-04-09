@@ -17,3 +17,32 @@ html, body {
     background-color: #222222e0;
     border: 1px solid #3a3a3aee;
 }
+
+@media screen and (max-width: 424px) {
+    .first-content {
+        text-align: initial!important;
+        padding: 1rem;
+    }
+
+    .first-content img {
+        width: 100%!important;
+    }
+
+    .informations {
+        padding: 0.5rem;
+    }
+
+    .informations p, ol {
+        text-align: initial!important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #example {
+        text-align: initial!important;
+    }
+
+    .form-style {
+        width: 100%!important;
+    }
+}
