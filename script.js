@@ -25,7 +25,7 @@ function affichageDonnees() {
     if (data) {
         data.forEach(item => {
             const p = document.createElement('p');
-            p.textContent = `Nom : ${item.nom} -Prénom :  ${item.prenom} - Mail : ${item.email} - Mot de passe : ${item.mdp}`;
+            p.innerHTML = (`<small><i>Nom&Prénom: ${item.nom} ${item.prenom}<br>Mail: ${item.email}<br>Mdp: ${item.mdp}</i></small>`);
             affichageDonnees.appendChild(p);
         });
     }
@@ -49,8 +49,11 @@ document.querySelectorAll('form').forEach(form => {
  * Écouteur d'événement pour le bouton de suppression des données en utilisant « localStorage.clear() ». Possibilité d'utiliser « localStorage.removeItem('Donnéesutilisateurs) ».
  */
 document.querySelector('#btnSuppr').addEventListener('click', function() {
-    localStorage.clear(); // Suppression de toutes les données présentes dans le localStorage
-    localStorage.removeItem('DonnéesUtilisateurs'); // Suppression seulement de la donnée « DonnéesUtilisateurs » dans le localStorage
+    // Suppression de toutes les données présentes dans le localStorage
+    // localStorage.clear();
+
+    // Suppression seulement de la donnée « DonnéesUtilisateurs » dans le localStorage
+    localStorage.removeItem('DonnéesUtilisateurs'); 
     
     affichageDonnees();
 });
