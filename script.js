@@ -1,5 +1,6 @@
 /**
  * Fonction pour sauvegarder les données dans le localStorage en utilisant « localStorage.setitem() »
+ * ! La variable « donnees » utilise du ternaire, pour récupérer les données stockées en LocalStorage et 
  * @param {*} formId 
  */
 function sauvegardeDonnees(formId) {
